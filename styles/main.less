@@ -1,0 +1,332 @@
+@import "bootstrap.less";
+
+body{
+    font-family: @font-family-sans-serif;
+    //background-color: @brand-primary-lighter;
+
+}
+
+.top-page{
+    margin-bottom: 20px;
+    padding : 7px 7px;
+    display: block;
+    background-color: @brand-primary-lighter;
+}
+
+.navbar{
+    margin-bottom: 0;
+}
+
+.brand-client{
+    padding-top: 5px!important;
+    padding-bottom: 10px!important;
+}
+
+.navbar-brand {
+    float: left;
+    padding: 10px 15px;
+    font-size: @font-size-large;
+    line-height: @line-height-computed;
+    height: @navbar-height;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    > img {
+        display: block;
+    }
+
+    @media (min-width: @grid-float-breakpoint) {
+        .navbar > .container &,
+        .navbar > .container-fluid & {
+            margin-left: -@navbar-padding-horizontal;
+        }
+    }
+}
+
+
+
+
+.bg-primary-lighter{
+    background-color: @brand-primary-lighter;
+}
+.bg-primary-light{
+    background-color: @brand-primary-light;
+}
+.bg-primary{
+    background-color: @brand-primary;
+}
+
+.bg-primary-dark{
+    background-color: @brand-primary-dark;
+}
+
+.bg-accent{
+    background-color: @brand-accent;
+}
+.txt-primary-lighter{
+    color: @brand-primary-lighter;
+}
+.txt-primary-light{
+    color: @brand-primary-light;
+}
+.txt-primary{
+    color: @brand-primary;
+}
+.txt-primary-dark{
+    color: @brand-primary-dark;
+}
+
+
+
+.hero{
+    h2{
+        font-size:2.62em;
+        @media all and (max-width : @screen-md-max) {
+            font-size:2.00em;
+        }
+    }
+    &.primary{
+        background-color: @brand-primary;
+        color:white;
+        h1{
+            color:@brand-primary-lighter;
+        }
+        .txt-type{
+            color:@brand-primary-lighter;
+        }
+    }
+    background-color: @gray-light;
+    color:@gray-darker;
+    .txt-type{
+        /*color:@brand-primary-lighter;
+        font-weight: 700;
+        font-size: @font-size-h4;
+        margin: 10px auto;
+        background-color: @brand-primary;
+        padding : 5px 15px;
+        display: block;
+        width:200px;*/
+
+    }
+}
+
+.block-step{
+
+    padding : 30px 45px;
+    .overlay{
+        //content:'';
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-color: white;
+        display: block;
+        z-index : 2;
+        cursor: position ;
+        .opacity(0.62);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -o-transition: all 300ms easein;
+        -ms-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+    //.opacity(0.38);
+
+    .title-step{
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: @font-size-h2;
+        .fa{
+            color:@gray;
+        }
+    }
+    .description{
+        color:@gray-light;
+        font-size: @font-size-base;
+    }
+    .cat{
+        color:@gray-darker;
+        text-transform: none;
+        font-size: @font-size-h4;
+        font-weight: 300;
+    }
+    .status{
+        i{
+            color:@brand-primary;
+        }
+        color:@gray-light;
+        text-transform: uppercase;
+        font-size: @font-size-base;
+        font-weight: 700;
+    }
+    .date{
+        color:@gray;
+        font-weight: 300;
+        font-size: @font-size-small;
+    }
+    .divider{
+        border-bottom:1px solid @gray;
+    }
+
+    .block-action{
+        //float : left;
+        &.primary{
+            border:3px solid rgba(0,0,0,0.38);
+
+        }
+
+        padding-bottom: 30px;
+
+
+        @media all and (max-width : @screen-md-max) {
+
+        }
+        @media all and (max-width : @screen-sm-max) {
+
+        }
+        @media all and (max-width : @screen-xs-max) {
+            //top : @dn-master-header-height-xs;
+        }
+        .status{
+           i{
+                color:@brand-primary;
+            }
+            font-weight: 900;
+            font-size: @font-size-h4;
+        }
+        &.bordered{
+            border-right:1px solid @gray;
+        }
+        .title{
+            font-size:@font-size-large;
+            font-weight: 300;
+            .fa{
+                color:@gray;
+            }
+        }
+
+    }
+
+    &.disabled{
+        .block-action {
+          display: none;
+        }
+    }
+    &.active{
+        background-color: @gray-darker;
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -o-transition: all 300ms easein;
+        -ms-transition: all 300ms ease;
+        transition: all 300ms ease;
+        .overlay{
+            //.opacity(1);
+            //z-index : -1;
+            height:0;
+        }
+        //.opacity(1);
+        .block-action {
+
+        }
+
+        .title-step , .cat  , .date {
+            color:white;
+        }
+
+        .block-action{
+            color:white;
+            ul{
+                li{
+                    a{
+                        color:@gray-light;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+.nav-centered{
+
+    ul {
+        margin:0;
+        padding:0;
+        list-style-type:none;
+        text-align:center;
+        li {
+            display:inline-block;
+        }
+    }
+    //border-bottom: 1px solid white;
+}
+
+
+.btn.btn-default{
+    text-transform: uppercase;
+    font-weight: bold;
+    .border-top-radius(0px);
+    .border-bottom-radius(0px);
+    background-color: @brand-accent;
+    color:white;
+    border-color: @brand-accent;
+    //padding : 15px 20px;
+    text-transform: uppercase;
+    &:hover{
+        background-color: @gray-darker;
+        color:white;
+    }
+    .glyphicon{
+        color:white;
+    }
+
+}
+
+
+.btn-hero{
+    font-weight: bold;
+    //.border-top-radius(0px);
+    //.border-bottom-radius(0px);
+    margin-bottom: 15px;
+    font-size:1.38em;
+    padding : 10px 30px;
+    background-color: @brand-primary;
+    color:@brand-primary-lighter;
+    &:hover{
+        background-color: @brand-primary-dark;
+        color:white;
+    }
+    .glyphicon{
+        color:white;
+    }
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid @gray-light;
+}
+
+
+
+
+
+
+.page-break{
+    page-break-before: always;
+}
+
+
+
+
+
+
+
+
+
